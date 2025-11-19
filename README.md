@@ -1,4 +1,4 @@
-# 🌟 React Bootstrap App
+# 🌟 React Ecommerce App
 
 A **modern React.js web application** built using **Bootstrap** for styling.  
 This project demonstrates a responsive and user-friendly UI without using Redux for state management, relying instead on React's built-in state and props.
