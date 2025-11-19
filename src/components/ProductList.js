@@ -5,9 +5,24 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { useEffect,useState } from "react";
-
+import { useDispatch,useSelector } from "react-redux";
+import { setNewProducts } from "./ProductSlice";
 
 const ProductList = (props) => {
+const dispatch=useDispatch();
+const onsetNewProducts=()=>{
+
+  const products=[
+{
+    id:1,
+    title:'T shirt'},
+   {id:2,
+    title:'watch'}
+
+
+  ]
+dispatch(setNewProducts(products))}
+
   const searchtext=props.searchtext;
   const [productList,setProductList]=useState([]);
   //const [catagories,setCatagoryList]=useState([]);
@@ -57,6 +72,9 @@ useEffect(LoadProductsBySearchText,[searchtext]);//array is not empty..so it loa
   
 // }> 
 return(
+  <>
+  <button onClick={onsetNewProducts}>set new products</button>
+  
 
     <div className="container"
       style={{
@@ -81,6 +99,7 @@ return(
       })} 
     
     </div>
+    </>
       
   );}
 
